@@ -677,7 +677,7 @@
 #define CPU_DVFS_FREQ12_LL_G75		898000		/* KHz */
 #define CPU_DVFS_FREQ13_LL_G75		830000		/* KHz */
 #define CPU_DVFS_FREQ14_LL_G75		725000		/* KHz */
-#define CPU_DVFS_FREQ15_LL_G75		4500000		/* KHz */
+#define CPU_DVFS_FREQ15_LL_G75		450000		/* KHz */
 
 /* for DVFS OPP table B */
 #define CPU_DVFS_FREQ0_L_G75		2133000		/* KHz */
