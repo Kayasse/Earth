@@ -151,6 +151,17 @@ struct perf_event_security_struct {
 	u32 sid;  /* SID of perf_event obj creator */
 };
 
+
+static inline struct inode_security_struct *selinux_inode(
+						const struct inode *inode)
+{
+	return inode->i_security;
+}
+
+static inline struct task_security_struct *selinux_cred(const struct cred *cred)
+{
+	return cred->security;
+
 extern struct lsm_blob_sizes selinux_blob_sizes;
 static inline struct task_security_struct *selinux_cred(const struct cred *cred)
 {
@@ -190,6 +201,7 @@ static inline u32 current_sid(void)
 	const struct task_security_struct *tsec = selinux_cred(current_cred());
 
 	return tsec->sid;
+
 }
 
 #endif /* _SELINUX_OBJSEC_H_ */
